@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Train 2 Talk | English Learning by Rajeev Kumar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#F8FAFC;
+  color:#0F172A;
+  line-height:1.6;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px;
+}
+
+section{
+  padding:90px 0;
+}
+
+/* Header */
+header{
+  background:#4338CA;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:100;
+  transition:all 0.3s ease;
+}
+
+header.scrolled{
+  box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+
+.logo{
+  font-weight:700;
+  font-size:1.3rem;
+  color:#FFFFFF;
+}
+
+nav a{
+  margin-left:30px;
+  text-decoration:none;
+  color:#E0E7FF;
+  font-weight:500;
+  position:relative;
+}
+
+nav a:hover{
+  color:#FFFFFF;
+}
+
+nav a.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:2px;
+  background:#FFFFFF;
+}
+
+/* Hero */
+.hero{
+  text-align:center;
+  padding:160px 20px 100px;
+}
+
+.hero h1{
+  font-size:3rem;
+  margin-bottom:18px;
+}
+
+.hero p{
+  color:#475569;
+  max-width:650px;
+  margin:0 auto 40px;
+}
+
+.btn{
+  background:#4338CA;
+  color:#FFFFFF;
+  padding:14px 36px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.btn:hover{
+  background:#3730A3;
+}
+
+/* Section Titles */
+.section-title{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:50px;
+}
+
+/* Grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#FFFFFF;
+  border:1px solid #E5E7EB;
+  border-radius:10px;
+  padding:35px 30px;
+  transition:0.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 22px rgba(0,0,0,0.08);
+}
+
+.card h3{
+  margin-bottom:12px;
+}
+
+.card p{
+  color:#475569;
+}
+
+/* Contact Form */
+form{
+  max-width:650px;
+  margin:auto;
+  display:grid;
+  gap:15px;
+}
+
+input, textarea{
+  padding:12px;
+  border-radius:6px;
+  border:1px solid #CBD5E1;
+  font-size:1rem;
+}
+
+button{
+  background:#4338CA;
+  color:#FFFFFF;
+  border:none;
+  padding:14px;
+  font-weight:600;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#3730A3;
+}
+
+/* Footer */
+footer{
+  border-top:1px solid #E5E7EB;
+  text-align:center;
+  padding:40px 10px;
+  color:#64748B;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero h1{font-size:2.2rem;}
+}
+</style>
+</head>
+
+<body>
+
+<header id="header">
+  <div class="container">
+    <nav>
+      <div class="logo">Train 2 Talk</div>
+      <div>
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#importance" class="nav-link">Importance</a>
+        <a href="#curriculum" class="nav-link">Curriculum</a>
+        <a href="#videos" class="nav-link">Videos</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Master English with Precision and Confidence</h1>
+    <p>
+      Train 2 Talk is a structured English learning initiative by Rajeev Kumar,
+      guiding learners from foundational fluency to advanced articulation.
+    </p>
+    <a class="btn" href="https://www.youtube.com/" target="_blank">View YouTube Channel</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About the Initiative</h2>
+    <p class="about-text">
+      Train 2 Talk empowers learners to communicate with clarity, confidence, and credibility across academic,
+      professional, and social environments through structured digital learning.
+    </p>
+  </div>
+</section>
+
+<!-- IMPORTANCE SECTION -->
+<section id="importance">
+  <div class="container">
+    <h2 class="section-title">Importance of English</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Global Communication</h3>
+        <p>English serves as the primary medium for international dialogue, enabling individuals to connect across cultures and borders.</p>
+      </div>
+
+      <div class="card">
+        <h3>Career Advancement</h3>
+        <p>Fluency enhances employability, leadership potential, and professional credibility in global markets.</p>
+      </div>
+
+      <div class="card">
+        <h3>Academic Excellence</h3>
+        <p>Most scholarly resources, research publications, and competitive examinations utilize English.</p>
+      </div>
+
+      <div class="card">
+        <h3>Digital Literacy</h3>
+        <p>Technology platforms, software documentation, and online education primarily operate in English.</p>
+      </div>
+
+      <div class="card">
+        <h3>Personal Confidence</h3>
+        <p>Effective communication strengthens self-expression, interpersonal relationships, and leadership presence.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cultural Exposure</h3>
+        <p>English opens access to global literature, cinema, news, and intellectual discourse.</p>
+      </div>
+
+      <div class="card">
+        <h3>Entrepreneurial Growth</h3>
+        <p>Business networking, pitching, and negotiations require professional English proficiency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="curriculum">
+  <div class="container">
+    <h2 class="section-title">Learning Pathway</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Foundational Level</h3>
+        <p>Pronunciation, vocabulary, sentence formation, and grammar fundamentals.</p>
+      </div>
+      <div class="card">
+        <h3>Intermediate Level</h3>
+        <p>Fluency building, conversational skills, comprehension enhancement.</p>
+      </div>
+      <div class="card">
+        <h3>Advanced Level</h3>
+        <p>Professional articulation, advanced grammar, public speaking mastery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <div class="container">
+    <h2 class="section-title">Featured Lessons</h2>
+    <div class="grid">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Mobile Number">
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Train 2 Talk. All Rights Reserved.
+</footer>
+
+<script>
+/* Sticky shadow */
+const header = document.getElementById("header");
+window.addEventListener("scroll", () => {
+  header.classList.toggle("scrolled", window.scrollY > 40);
+});
+
+/* Active menu highlight */
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if(scrollY >= sectionTop){
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if(link.getAttribute("href") === "#" + current){
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
