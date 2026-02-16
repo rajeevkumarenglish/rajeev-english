@@ -1,355 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Train 2 Talk | English Learning by Rajeev Kumar</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Train 2 Talk | English Learning by Rajeev Kumar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',sans-serif;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
 
-body{
-  background:#F8FAFC;
-  color:#0F172A;
-  line-height:1.6;
-}
+    body {
+      background: #F8FAFC;
+      color: #0F172A;
+      line-height: 1.6;
+    }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px;
-}
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
 
-section{
-  padding:90px 0;
-}
+    section {
+      padding: 100px 0;
+    }
 
-/* Header */
-header{
-  background:#4338CA;
-  position:fixed;
-  width:100%;
-  top:0;
-  z-index:100;
-  transition:all 0.3s ease;
-}
+    /* HEADER */
+    header {
+      background: #4338CA;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
 
-header.scrolled{
-  box-shadow:0 6px 18px rgba(0,0,0,0.25);
-}
+    .logo img {
+      height: 55px;
+      transform: scaleX(1.2);
+    }
 
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 0;
-}
+    header.scrolled {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
 
-.logo{
-  font-weight:700;
-  font-size:1.3rem;
-  color:#FFFFFF;
-}
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
 
-nav a{
-  margin-left:30px;
-  text-decoration:none;
-  color:#E0E7FF;
-  font-weight:500;
-  position:relative;
-}
+    .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #FFFFFF;
+    }
 
-nav a:hover{
-  color:#FFFFFF;
-}
+    nav a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #E0E7FF;
+      font-weight: 500;
+      position: relative;
+      transition: 0.3s;
+    }
 
-nav a.active::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:100%;
-  height:2px;
-  background:#FFFFFF;
-}
+    nav a:hover {
+      color: #FFFFFF;
+    }
 
-/* Hero */
-.hero{
-  text-align:center;
-  padding:160px 20px 100px;
-}
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 2px;
+      background: #FFFFFF;
+    }
 
-.hero h1{
-  font-size:3rem;
-  margin-bottom:18px;
-}
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 190px 20px 120px;
+      background: linear-gradient(135deg, #EEF2FF, #F8FAFC);
+    }
 
-.hero p{
-  color:#475569;
-  max-width:650px;
-  margin:0 auto 40px;
-}
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #4338CA, #6366F1);
 
-.btn{
-  background:#4338CA;
-  color:#FFFFFF;
-  padding:14px 36px;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:600;
-}
+      /* Standard property */
+      background-clip: text;
 
-.btn:hover{
-  background:#3730A3;
-}
+      /* Vendor prefix for Chrome/Safari */
+      -webkit-background-clip: text;
 
-/* Section Titles */
-.section-title{
-  text-align:center;
-  font-size:2rem;
-  margin-bottom:50px;
-}
+      /* Make text transparent */
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
 
-/* Grid */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-}
 
-.card{
-  background:#FFFFFF;
-  border:1px solid #E5E7EB;
-  border-radius:10px;
-  padding:35px 30px;
-  transition:0.3s ease;
-}
+    .hero p {
+      color: #475569;
+      max-width: 680px;
+      margin: 0 auto 45px;
+      font-size: 1.1rem;
+    }
 
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 22px rgba(0,0,0,0.08);
-}
+    .btn {
+      background: #4338CA;
+      color: #FFFFFF;
+      padding: 15px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-.card h3{
-  margin-bottom:12px;
-}
+    .btn:hover {
+      background: #3730A3;
+      transform: translateY(-2px);
+    }
 
-.card p{
-  color:#475569;
-}
+    /* SECTION TITLE */
+    .section-title {
+      text-align: center;
+      font-size: 2.1rem;
+      margin-bottom: 60px;
+      font-weight: 700;
+    }
 
-/* Contact Form */
-form{
-  max-width:650px;
-  margin:auto;
-  display:grid;
-  gap:15px;
-}
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+    }
 
-input, textarea{
-  padding:12px;
-  border-radius:6px;
-  border:1px solid #CBD5E1;
-  font-size:1rem;
-}
+    /* CARD */
+    .card {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 40px 35px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    }
 
-button{
-  background:#4338CA;
-  color:#FFFFFF;
-  border:none;
-  padding:14px;
-  font-weight:600;
-  border-radius:6px;
-  cursor:pointer;
-}
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(67, 56, 202, 0.15);
+    }
 
-button:hover{
-  background:#3730A3;
-}
+    .card h3 {
+      margin-bottom: 12px;
+    }
 
-/* Footer */
-footer{
-  border-top:1px solid #E5E7EB;
-  text-align:center;
-  padding:40px 10px;
-  color:#64748B;
-}
+    .card p {
+      color: #475569;
+    }
 
-/* Responsive */
-@media(max-width:768px){
-  .hero h1{font-size:2.2rem;}
-}
-</style>
+    /* VIDEOS */
+    #videos iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* CONTACT */
+    .contact-wrapper {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+      margin-top: 50px;
+    }
+
+    .contact-info {
+      flex: 1;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 12px;
+      color: #475569;
+    }
+
+    form {
+      flex: 1;
+      display: grid;
+      gap: 18px;
+    }
+
+    input,
+    textarea {
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid #CBD5E1;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #4338CA;
+      box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.15);
+    }
+
+    button {
+      background: #4338CA;
+      color: #FFFFFF;
+      border: none;
+      padding: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #3730A3;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #E5E7EB;
+      text-align: center;
+      padding: 50px 10px;
+      color: #64748B;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+    }
+
+    @media(max-width:768px) {
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header id="header">
-  <div class="container">
-    <nav>
-      <div class="logo">Train 2 Talk</div>
-      <div>
-        <a href="#about" class="nav-link active">About</a>
-        <a href="#importance" class="nav-link">Importance</a>
-        <a href="#curriculum" class="nav-link">Curriculum</a>
-        <a href="#videos" class="nav-link">Videos</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
-    </nav>
-  </div>
-</header>
+  <header id="header">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo.png" alt="Train 2 Talk Logo">
+          </a>
+        </div>
 
-<section class="hero">
-  <div class="container">
-    <h1>Master English with Precision and Confidence</h1>
-    <p>
-      Train 2 Talk is a structured English learning initiative by Rajeev Kumar,
-      guiding learners from foundational fluency to advanced articulation.
-    </p>
-    <a class="btn" href="https://www.youtube.com/" target="_blank">View YouTube Channel</a>
-  </div>
-</section>
+        <div>
+          <a href="#about" class="nav-link active">About</a>
+          <a href="#importance" class="nav-link">Importance</a>
+          <a href="#curriculum" class="nav-link">Curriculum</a>
+          <a href="#videos" class="nav-link">Videos</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<section id="about">
-  <div class="container">
-    <h2 class="section-title">About the Initiative</h2>
-    <p class="about-text">
-      Train 2 Talk empowers learners to communicate with clarity, confidence, and credibility across academic,
-      professional, and social environments through structured digital learning.
-    </p>
-  </div>
-</section>
+  <section class="hero">
+    <div class="container">
+      <h1>Master English with Precision and Confidence</h1>
+      <p>
+        Train 2 Talk is a structured English learning initiative by Rajeev Kumar,
+        guiding learners from foundational fluency to advanced articulation.
+      </p>
+      <a class="btn" href="https://www.youtube.com/" target="_blank">View YouTube Channel</a>
+    </div>
+  </section>
 
-<!-- IMPORTANCE SECTION -->
-<section id="importance">
-  <div class="container">
-    <h2 class="section-title">Importance of English</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Global Communication</h3>
-        <p>English serves as the primary medium for international dialogue, enabling individuals to connect across cultures and borders.</p>
-      </div>
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About the Initiative</h2>
+      <p style="max-width:750px;margin:auto;text-align:center;color:#475569;">
+        Train 2 Talk empowers learners to communicate with clarity, confidence,
+        and credibility across academic, professional, and social environments
+        through structured digital learning.
+      </p>
+    </div>
+  </section>
 
-      <div class="card">
-        <h3>Career Advancement</h3>
-        <p>Fluency enhances employability, leadership potential, and professional credibility in global markets.</p>
-      </div>
-
-      <div class="card">
-        <h3>Academic Excellence</h3>
-        <p>Most scholarly resources, research publications, and competitive examinations utilize English.</p>
-      </div>
-
-      <div class="card">
-        <h3>Digital Literacy</h3>
-        <p>Technology platforms, software documentation, and online education primarily operate in English.</p>
-      </div>
-
-      <div class="card">
-        <h3>Personal Confidence</h3>
-        <p>Effective communication strengthens self-expression, interpersonal relationships, and leadership presence.</p>
-      </div>
-
-      <div class="card">
-        <h3>Cultural Exposure</h3>
-        <p>English opens access to global literature, cinema, news, and intellectual discourse.</p>
-      </div>
-
-      <div class="card">
-        <h3>Entrepreneurial Growth</h3>
-        <p>Business networking, pitching, and negotiations require professional English proficiency.</p>
+  <section id="importance">
+    <div class="container">
+      <h2 class="section-title">Importance of English</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Global Communication</h3>
+          <p>Connect across cultures and borders effectively.</p>
+        </div>
+        <div class="card">
+          <h3>Career Advancement</h3>
+          <p>Enhance employability and professional credibility.</p>
+        </div>
+        <div class="card">
+          <h3>Academic Excellence</h3>
+          <p>Access global research and competitive exams.</p>
+        </div>
+        <div class="card">
+          <h3>Digital Literacy</h3>
+          <p>Navigate global technology and platforms.</p>
+        </div>
+        <div class="card">
+          <h3>Personal Confidence</h3>
+          <p>Improve leadership and communication presence.</p>
+        </div>
+        <div class="card">
+          <h3>Entrepreneurial Growth</h3>
+          <p>Pitch, negotiate and network globally.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="curriculum">
-  <div class="container">
-    <h2 class="section-title">Learning Pathway</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Foundational Level</h3>
-        <p>Pronunciation, vocabulary, sentence formation, and grammar fundamentals.</p>
-      </div>
-      <div class="card">
-        <h3>Intermediate Level</h3>
-        <p>Fluency building, conversational skills, comprehension enhancement.</p>
-      </div>
-      <div class="card">
-        <h3>Advanced Level</h3>
-        <p>Professional articulation, advanced grammar, public speaking mastery.</p>
+  <section id="curriculum">
+    <div class="container">
+      <h2 class="section-title">Learning Pathway</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Foundational</h3>
+          <p>Grammar, pronunciation, vocabulary basics.</p>
+        </div>
+        <div class="card">
+          <h3>Intermediate</h3>
+          <p>Fluency building and conversational skills.</p>
+        </div>
+        <div class="card">
+          <h3>Advanced</h3>
+          <p>Professional articulation & public speaking.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="videos">
-  <div class="container">
-    <h2 class="section-title">Featured Lessons</h2>
-    <div class="grid">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  <section id="videos">
+    <div class="container">
+      <h2 class="section-title">Featured Lessons</h2>
+      <div class="grid">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT SECTION -->
-<section id="contact">
-  <div class="container">
-    <h2 class="section-title">Contact Us</h2>
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-wrapper">
 
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="tel" placeholder="Mobile Number">
-      <textarea rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+        <div class="contact-info">
+          <h3>Let’s Start Your English Journey</h3>
+          <p>Send us your enquiry and we’ll get back to you shortly.</p>
+          <p><strong>Email:</strong> YOUR_EMAIL@gmail.com</p>
+          <p><strong>Location:</strong> Delhi, India</p>
+        </div>
 
-  </div>
-</section>
+        <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Mobile Number">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <input type="hidden" name="_captcha" value="false">
+          <button type="submit">Send Message</button>
+        </form>
 
-<footer>
-  © 2026 Train 2 Talk. All Rights Reserved.
-</footer>
+      </div>
+    </div>
+  </section>
 
-<script>
-/* Sticky shadow */
-const header = document.getElementById("header");
-window.addEventListener("scroll", () => {
-  header.classList.toggle("scrolled", window.scrollY > 40);
-});
+  <footer>
+    © 2026 Train 2 Talk. All Rights Reserved.
+  </footer>
 
-/* Active menu highlight */
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 150;
-    if(scrollY >= sectionTop){
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if(link.getAttribute("href") === "#" + current){
-      link.classList.add("active");
-    }
-  });
-});
-</script>
+  <script>
+    const header = document.getElementById("header");
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("scrolled", window.scrollY > 40);
+    });
+  </script>
 
 </body>
+
 </html>
